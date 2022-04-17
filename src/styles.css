@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+:root {
+    --primary-background-color: #291165;
+    --primary-color: #4b2d98;
+    --card-color: #f1f7f7;
+    --text-body-color: #020d1d;
+}
+
+body {
+   
+    margin: 0;
+    background-color: var(--card-color);
+    font-family: 'Oswald', sans-serif;
+    border: red;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--text-body-color);
+}
+.highlighted{
+    box-shadow: 0 2px 16px 0 #de1e19, 0 3px 8px 0 rgba(226, 21, 19, 0.47), 0 6px 8px -1px #b41c18;  
+   
+}
