@@ -1,1 +1,14 @@
-<p>movie-card works!</p>
+<div class="movie-box" (click)="onClick()">
+  <p>{{ movie.movieID }}</p>
+
+  <div>
+    <img width="180" alt="Movie Image " [src]="movie.thumbnailURL" />
+  <div class="movie-title">{{ movie.movieName }}</div>
+</div>
+  
+
+  <app-tomato-card [tomatoScore]="movie.tomatoScore">
+    <span >{{ movie.mpaaRating }}</span>
+    <div>{{ movie.releaseDate }}</div>
+  </app-tomato-card>
+</div>
