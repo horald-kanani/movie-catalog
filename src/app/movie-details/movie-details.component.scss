@@ -1,0 +1,27 @@
+.movie-box{
+  display: flex;
+ justify-content: space-around;
+ align-items: flex-start;
+ padding: 20px;
+ box-sizing: border-box;
+ text-align: center;
+}
+
+.movie-box p{
+  padding:10px 60px;
+  text-align: left;
+}
+.movie-box .home-button{
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
