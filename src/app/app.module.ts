@@ -7,15 +7,12 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { SearchFilterPipe } from './pipes/search-filter.pipe';
+import { SearchFilterPipe } from './pipes/search.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { TomatoCardComponent } from './tomato-card/tomato-card.component';
 import { HighlightedDirective } from './directives/highlighted.directive';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MovieService } from './services/movie.service';
-
-
-
 
 @NgModule({
   declarations: [
@@ -26,20 +23,10 @@ import { MovieService } from './services/movie.service';
     SortPipe,
     TomatoCardComponent,
     HighlightedDirective,
-    MovieDetailsComponent
- 
-    
+    MovieDetailsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
-  providers: [
-    MovieService
-   
-  ],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  providers: [MovieService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

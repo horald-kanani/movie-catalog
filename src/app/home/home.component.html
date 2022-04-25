@@ -1,0 +1,72 @@
+<div class="top-menu">
+  <div class="home-description">
+    <h1>All your favorite movies!</h1>
+    <p>
+      We've got 'em, and you can watch 'em. Not on this site, unfortunately, but
+      maybe if you have Netflix?
+    </p>
+  </div>
+</div>
+
+<div class="nav-bar">
+  <span>
+   <span >
+    <input class="search-input"
+      type="search"
+      name="title"
+      id="search-id "
+      [(ngModel)]="title"
+      placeholder="Enter title to search"
+    />
+  </span>
+
+  <span class=" value-input">
+    <label>Sort by</label>
+    <select [(ngModel)]="parameter" class="select">
+      <option value=""></option>
+      <option value="movieName">title</option>
+      <option value="movieID">id</option>
+      <option value="releaseDate">date</option>
+      <option value="tomatoScore">tomato</option>
+    </select>
+  </span>
+
+  <span class=" radio-input">
+    <input
+      type="radio"
+      name="movieName"
+      id="descending"
+      value="desc"
+      [(ngModel)]="sortDirection"
+    />desc
+    <input
+      type="radio"
+      name="movieName"
+      id="ascending"
+      value="asc"
+      [(ngModel)]="sortDirection"
+    />asc
+  </span> 
+  </span>
+  
+  <span >
+    <button class="suggest" 
+    (click)="onSuggest()">
+      Suggest!</button>
+  </span>
+</div>
+<div *ngIf="movies$ |async as asynchMovies">
+    <app-movie-card
+  *ngFor="
+    let movie of asynchMovies 
+    | searchFilter: title 
+    | sort: [parameter, sortDirection]"
+  (movieSelected)="onMovieSelected($event)"
+  highlighted
+  [movie]="movie"
+>
+</app-movie-card>
+</div>
+
+
+

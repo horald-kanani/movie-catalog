@@ -11,8 +11,8 @@ import { MovieService } from '../services/movie.service';
   styleUrls: ['./movie-details.component.scss']
 })
 export class MovieDetailsComponent implements OnInit {
-  movie$!: Observable<Movie>;
-  movie!: Movie;
+  movie$: Observable<Movie>;
+  movie: Movie;
   constructor( private router: Router,private svc:MovieService) {
     
   }

@@ -1,0 +1,49 @@
+.top-menu {
+  background-image: url("/assets/images/Header-Background.png");
+  background-size: cover;
+  display: flex;
+}
+.home-description {
+  margin: 2rem;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  color: var(--card-color);
+  max-width: 250px;
+  text-align: center;
+}
+
+.nav-bar {
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.search-input {
+  border-radius: 8px;
+}
+
+.value-input {
+  padding-left: 30px;
+}
+.suggest {
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.suggest:hover {
+  background-color: var(--primary-color);
+}
+
+.suggest:active {
+  background-color: var(--card-color);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

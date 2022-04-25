@@ -10,7 +10,7 @@ import { Movie } from '../model/movie';
 export class MovieCardComponent implements OnInit {
 
   @Input()
-  movie!: Movie;
+  movie:Movie;
   @Output()
   movieSelected = new EventEmitter<Movie>();
 
