@@ -1,0 +1,12 @@
+ 
+<div *ngIf="tomatoScore> '50%'; else rotten">
+  
+  <img src="/assets/images/tomato-fresh.png" alt="Tomato Score">{{tomatoScore}}
+ <ng-content ></ng-content>
+</div>
+
+<ng-template #rotten>
+  <img src="assets/images/tomato-rotten.png" alt="Tomato Rotten">{{tomatoScore}}
+  
+</ng-template>
+

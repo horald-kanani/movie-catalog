@@ -1,17 +1,18 @@
-.movie-box{
+.movie-box {
   display: flex;
- justify-content: space-around;
- align-items: flex-start;
- padding: 20px;
- box-sizing: border-box;
- text-align: center;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-.movie-box p{
-  padding:10px 60px;
+.movie-box p {
+  padding: 10px 60px;
   text-align: left;
 }
-.movie-box .home-button{
+
+.movie-box .home-button {
   display: inline-block;
   padding: 10px 25px;
   font-size: 24px;
